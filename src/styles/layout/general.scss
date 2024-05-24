@@ -1,0 +1,35 @@
+* {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'OpenSans', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+    background-color: $background_color;
+    color: $main_text-color;
+    padding-left: $menu_width;
+    display: block;
+    min-width: 320px;
+
+    @include max-break($mobile-break) {
+        padding-left: 0;
+    }
+}

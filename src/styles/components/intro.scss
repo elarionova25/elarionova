@@ -1,0 +1,121 @@
+.intro-section {
+  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+.intro {
+  height: 100%;
+  position: static;
+  box-sizing: border-box;
+  justify-content: center;
+  align-content: center;
+  margin: 0 0 0 3rem;
+
+  &_header {
+    cursor: default;
+    font-size: 6.3rem;
+    font-weight: normal;
+
+    @include max-break($tablet-break) {
+      font-size: 3rem;
+    }
+  }
+
+
+  &_header-waving {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+  &_header_letter {
+    transition: all .2s ease-in-out;
+  }
+
+  &_header_letter:hover {
+    font-size: 7rem;
+    color: $blue-color !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+    @include max-break($tablet-break) {
+      font-size: 3rem;
+    }
+  }
+
+  &_header_letter-main {
+    color: $pink-color !important;
+    font-size: 1.2em;
+    font-weight: 600;
+    animation-duration: .6s;
+    display: inline-block;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+  &_header_letter-main:hover {
+    animation-name: rubberBand;
+  }
+
+  @keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }
+    100% { transform: rotate( 0.0deg) }
+  }
+
+  @keyframes rubberBand {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+      transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+      transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  &_contact-button {
+    width: max-content;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    padding: .7rem 1.4rem .5rem;
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+    color: $accent-color;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.4s ease-out 0s;
+    display: inline-block;
+    margin-top: 20px;
+
+    &:hover, &:focus {
+      color: $pink-color;
+      border: 1px solid $pink-color;
+    }
+  }
+}
