@@ -1,0 +1,38 @@
+.skills-section {
+  background-color: $pink-light-color;
+
+  @include max-break($tablet-break) {
+    height: fit-content;
+    padding: 50px;
+  }
+}
+
+.skills {
+  padding: 100px;
+  width: 100%;
+
+  @include max-break($tablet-break) {
+    padding: 0;
+  }
+
+  &-title {
+    color: $blue-color;
+    text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &-content {
+    width: 100%;
+    padding-top: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include max-break($tablet-break) {
+      flex-direction: column;
+    }
+  }
+}

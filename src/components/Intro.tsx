@@ -33,9 +33,9 @@ const Intro = () => {
     return (
         <section id="intro" className="section intro-section">
             <div className="intro">
-                <h1 className="intro_header" ref={textRef}></h1>
+                <h1 className="intro_header" ref={textRef} data-aos="fade-up"></h1>
                 <div className="intro_contact">
-                    <a href="#contact"><button className="intro_contact-button">Reach me</button></a>
+                    <a href="#contact"><button className="intro_contact-button" data-aos="fade-up">Reach me</button></a>
                 </div>
             </div>
         </section>

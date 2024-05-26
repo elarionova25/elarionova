@@ -1,0 +1,52 @@
+.about-section {
+  background-color: $blue-light-color;
+  height: fit-content;
+
+  @include max-break($tablet-break) {
+    padding: 50px;
+  }
+}
+
+.about {
+  padding: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include max-break($tablet-break) {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  &-content {
+    max-width: 50%;
+
+    &_title {
+      color: $pink-color;
+      text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
+      max-width: 30rem;
+      text-align: justify;
+    }
+
+    @include max-break($tablet-break) {
+      max-width: 100%;
+    }
+  }
+
+  &-image {
+    margin-left: 50px;
+    width: 40%;
+    height: 500px;
+    background-image: url(",,/../../images/logo-lg.jpg");
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+
+    @include max-break($tablet-break) {
+      width: 100%;
+      margin-left: 0;
+      height: 250px;
+    }
+  }
+}

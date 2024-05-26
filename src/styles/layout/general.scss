@@ -33,3 +33,13 @@ code {
         padding-left: 0;
     }
 }
+
+section {
+    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+h1 {
+    font-size: 90px;
+}

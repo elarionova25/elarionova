@@ -1,0 +1,53 @@
+.skills-card {
+  width: 100%;
+  max-width: 16rem;
+  padding: 1rem;
+  margin: .5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  background-color: $blue-light-color;
+
+  @include max-break($tablet-break) {
+    margin: 10px auto;
+  }
+
+  &_title {
+    margin: 0 0 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  &_list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+
+    &_item {
+      background-color: $pink-light-color;
+      width: 100%;
+      max-width: 6rem;
+      display: flex;
+      padding: .8rem;
+      margin-bottom: .5rem;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      border-radius: 20px;
+      border: 1px solid #3d3d3d;
+      box-sizing: border-box;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: .7rem;
+      }
+
+      p {
+        font-size: .8rem;
+      }
+    }
+  }
+}

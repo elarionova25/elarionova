@@ -12,14 +12,21 @@
   flex-direction: column;
   align-items: center;
   transition: left .3s ease;
+  border-right: #0883fd 1px;
 
-  &_top {
+  &_logo {
     width: 100%;
-    padding: 2rem;
-    background-color: $blue-color;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
+    height: 20%;
+
+    &_img {
+      margin: 50px auto;
+      height: 70px;
+      width: 70px;
+      background-image: url(",,/../../images/logo.jpeg");
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+    }
   }
 
   &_navigation {
@@ -37,22 +44,33 @@
       text-decoration: none;
       color: inherit;
       text-align: center;
-      transition: all .1s;
+      transition: all .6s;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
+      height: 64px;
 
       p {
         position: absolute;
         text-align: center;
         opacity: 1;
         letter-spacing: 1px;
-        font-size: .8rem;
+        font-size: 1rem;
+        display: none;
+        transition: all .6s;
       }
 
       &:hover {
-        background-color: $pink-color;
+        background-color: $blue-light-color;
+
+        p {
+          display: inline-block;
+        }
+
+        svg {
+          display: none;
+        }
       }
 
       &:hover p {
@@ -97,12 +115,12 @@
     }
 
     .circle.github-link:hover {
-      background-color: $pink-color;
+      background-color: $blue-light-color;
       &:before {
-        border-bottom-color: $pink-color;
+        border-bottom-color: $blue-light-color;
       }
       &:after {
-        border-top-color: $pink-color;
+        border-top-color: $blue-light-color;
       }
     }
   }
