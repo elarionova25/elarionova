@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
+import { oneko } from "./plugins/oneko";
 
 const AboutMe = React.lazy(() => {
     return import('./components/AboutMe');
@@ -14,6 +15,7 @@ const Skills = React.lazy(() => {
 
 function App() {
     AOS.init();
+    oneko();
 
     return <>
         <Navbar />

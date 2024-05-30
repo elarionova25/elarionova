@@ -30,8 +30,18 @@ const Intro = () => {
         })
     }, []);
 
+    const addOneko = () => {
+        const onekoEl: HTMLElement | null = document.querySelector('#oneko');
+
+        if (!onekoEl) return;
+
+        if (onekoEl.style.display === 'none') {
+            onekoEl.style.display = 'block';
+        }
+    }
+
     return (
-        <section id="intro" className="section intro-section">
+        <section id="intro" className="section intro-section" onMouseEnter={addOneko}>
             <div className="intro">
                 <h1 className="intro_header" ref={textRef} data-aos="fade-up"></h1>
                 <div className="intro_contact">

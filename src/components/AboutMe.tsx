@@ -2,8 +2,16 @@ import React from "react";
 
 
 const AboutMe = () => {
+    const removeOneko = () => {
+        const onekoEl: HTMLElement | null = document.querySelector('#oneko');
+
+        if (!onekoEl) return;
+
+        onekoEl.style.display = 'none';
+    }
+
     return (
-        <section id="about" className="section about-section">
+        <section id="about" className="section about-section" onMouseEnter={removeOneko}>
             <div className="about">
                 <div className="about-content">
                     <h1 className="about-content_title" data-aos="fade-right">About Me</h1>
