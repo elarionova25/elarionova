@@ -13,6 +13,8 @@ import restApi from './restApi.png';
 import reduxImg from './redux.svg';
 import webpackImg from './webpack.png';
 import bootstrapImg from './bootstrap.png';
+import nuxtImg from './nuxt.png'
+import figmaImg from './figma.png'
 
 export {
   htmlImg,
@@ -30,4 +32,6 @@ export {
   reduxImg,
   webpackImg,
   bootstrapImg,
+  nuxtImg,
+  figmaImg,
 };

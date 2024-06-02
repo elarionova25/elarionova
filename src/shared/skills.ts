@@ -13,7 +13,7 @@ import {
     restApi,
     reduxImg,
     webpackImg,
-    bootstrapImg,
+    bootstrapImg, nuxtImg, figmaImg,
 } from "../images/skills-icons";
 
 export const skills = [
@@ -41,7 +41,11 @@ export const skills = [
             },
             {
                 img: vueImg,
-                title: 'Vue'
+                title: 'Vue.js'
+            },
+            {
+                img: nuxtImg,
+                title: 'Nuxt.js'
             },
             {
                 img: reactImg,
@@ -78,6 +82,10 @@ export const skills = [
             {
                 img: bootstrapImg,
                 title: 'Bootstrap'
+            },
+            {
+                img: figmaImg,
+                title: 'Figma'
             },
         ]
     },

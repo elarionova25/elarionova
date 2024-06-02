@@ -1,5 +1,5 @@
 import React from "react";
-import {telegramIcon, gmailIcon, hhIcon, instIcon, linkedinIcon, githubIcon} from "../images/contacts";
+import {telegramIcon, gmailIcon, hhIcon, githubIcon} from "../images/contacts";
 import Heading from "../components/Heading";
 
 const contacts = [
@@ -22,22 +22,10 @@ const contacts = [
         href: 'https://spb.hh.ru/resume/88463f5bff08e0cda50039ed1f6e5a46736f41'
     },
     {
-        id: 4,
-        title: 'Instagram',
-        img: instIcon,
-        href: ''
-    },
-    {
-        id: 5,
-        title: 'Linkedin',
-        img: linkedinIcon,
-        href: ''
-    },
-    {
         id: 6,
         title: 'GitHub',
         img: githubIcon,
-        href: ''
+        href: 'https://github.com/elarionova25'
     }
 ];
 

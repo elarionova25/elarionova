@@ -1,4 +1,4 @@
-import gazpromOlympiad from './gazprom.jpeg';
+import gazpromOlympiad from './gazpr.jpeg';
 import domainsPage from './domains-page.png'
 
 export {
