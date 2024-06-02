@@ -1,4 +1,6 @@
 import React, {useEffect, useRef} from "react";
+import { oneko } from "../plugins/oneko";
+import CV from '../docs/CV.pdf';
 
 const Intro = () => {
     const textRef: any = useRef('');
@@ -16,6 +18,8 @@ const Intro = () => {
             const letter = document.createElement('span');
             letter.innerText = char;
             letter.className = 'intro_header_letter';
+            letter.dataset.aos="letter-animation";
+            letter.dataset.aosDuration="800";
 
             if (char === '*') {
                 letter.innerText = '👋🏻';
@@ -31,21 +35,24 @@ const Intro = () => {
     }, []);
 
     const addOneko = () => {
-        const onekoEl: HTMLElement | null = document.querySelector('#oneko');
+        oneko()
+    }
 
-        if (!onekoEl) return;
-
-        if (onekoEl.style.display === 'none') {
-            onekoEl.style.display = 'block';
-        }
+    const removeOneko = () => {
+        document.querySelector('#oneko')?.remove();
     }
 
     return (
-        <section id="intro" className="section intro-section" onMouseEnter={addOneko}>
+        <section id="intro" className="section intro-section" onMouseEnter={addOneko} onMouseLeave={removeOneko}>
             <div className="intro">
-                <h1 className="intro_header" ref={textRef} data-aos="fade-up"></h1>
-                <div className="intro_contact">
-                    <a href="#contact"><button className="intro_contact-button" data-aos="fade-up">Reach me</button></a>
+                <h1 className="intro_header" ref={textRef}></h1>
+                <div className="intro_content">
+                    <a href="#contacts">
+                        <button className="intro-button" data-aos="fade-up">Reach me</button>
+                    </a>
+                    <a href={CV} target="_blank">
+                        <button className="intro-button" data-aos="fade-up">CV</button>
+                    </a>
                 </div>
             </div>
         </section>

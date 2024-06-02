@@ -1,7 +1,8 @@
 .intro-section {
-  background: linear-gradient(-45deg, #fdf1ed, #fceef4, #eef7fd, #eefcf6);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  //background: linear-gradient(-45deg, #fdf1ed, #fceef4, #eef7fd, #eefcf6);
+  //background-size: 400% 400%;
+  //animation: gradient 15s ease infinite;
+  background-image: linear-gradient(to bottom, $background_color, $background_color);
 }
 
 .intro {
@@ -58,14 +59,15 @@
     animation-name: rubberBand;
   }
 
-  &_contact-button {
+  &-button {
     width: max-content;
     font-size: 1.5rem;
     background-color: transparent;
     padding: .7rem 1.4rem .5rem;
-    border: 1px solid $accent-color;
+    margin-right: 20px;
+    border: 1px solid $pink-color;
     border-radius: 4px;
-    color: $accent-color;
+    color: $pink-color;
     cursor: pointer;
     letter-spacing: 1px;
     transition: all 0.4s ease-out 0s;

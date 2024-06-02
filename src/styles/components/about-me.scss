@@ -1,5 +1,5 @@
 .about-section {
-  background-color: $blue-light-color;
+  background-image: linear-gradient(to bottom, $background_color, $blue-light-color);
   height: fit-content;
 
   @include max-break($tablet-break) {

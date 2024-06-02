@@ -1,5 +1,6 @@
 .skills-section {
-  background-color: $pink-light-color;
+  background-image: linear-gradient(to bottom, $blue-light-color, $pink-light-color);
+  height: 90vh;
 
   @include max-break($tablet-break) {
     height: fit-content;
@@ -16,7 +17,7 @@
   }
 
   &-title {
-    color: $blue-color;
+    color: $pink-color;
     text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
     max-width: 30rem;
     margin: 0 auto;

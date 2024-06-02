@@ -1,0 +1,76 @@
+.portfolio-section {
+  //background-color: $background_color;
+  background-image: linear-gradient(to bottom, $pink-light-color, $background_color);
+
+  @include max-break($tablet-break) {
+    height: fit-content;
+    padding: 50px;
+  }
+}
+
+.portfolio {
+  padding: 50px;
+  width: 100%;
+
+  @include max-break($tablet-break) {
+    padding: 0;
+  }
+
+  &-title {
+    color: $blue-color;
+    text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
+  }
+
+  &-content {
+    margin-top: 50px;
+  }
+}
+
+.project-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &_item {
+    width: 25%;
+    height: 15rem;
+    position: relative;
+    background-color: white;
+
+    &_img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+      display: block;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    &_description {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+
+      h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        line-height: 100%;
+      }
+    }
+
+    &:hover &_img {
+      opacity: 0.3;
+    }
+    &:hover &_description {
+      opacity: 1;
+    }
+  }
+}

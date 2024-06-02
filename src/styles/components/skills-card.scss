@@ -6,7 +6,8 @@
   display: flex;
   flex-direction: column;
   border-radius: 40px;
-  background-color: $blue-light-color;
+  background-color: $pink-light-color;
+  border: 1px solid $typography-color;
 
   @include max-break($tablet-break) {
     margin: 10px auto;
@@ -36,7 +37,7 @@
       flex-direction: column;
       flex-wrap: nowrap;
       border-radius: 20px;
-      border: 1px solid #3d3d3d;
+      border: 1px solid $typography-color;
       box-sizing: border-box;
 
       img {

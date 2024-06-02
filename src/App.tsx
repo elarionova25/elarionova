@@ -4,7 +4,6 @@ import 'aos/dist/aos.css';
 
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
-import { oneko } from "./plugins/oneko";
 
 const AboutMe = React.lazy(() => {
     return import('./components/AboutMe');
@@ -12,10 +11,15 @@ const AboutMe = React.lazy(() => {
 const Skills = React.lazy(() => {
     return import('./components/Skills');
 });
+const Portfolio = React.lazy(() => {
+    return import('./components/Portfolio');
+});
+const Contacts = React.lazy(() => {
+    return import('./components/Contacts');
+});
 
 function App() {
     AOS.init();
-    oneko();
 
     return <>
         <Navbar />
@@ -24,6 +28,8 @@ function App() {
             <Suspense fallback={<div />}>
                 <AboutMe />
                 <Skills />
+                <Portfolio />
+                <Contacts />
             </Suspense>
         </main>
     </>

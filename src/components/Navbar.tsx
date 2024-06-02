@@ -32,7 +32,7 @@ const Navbar = () => {
                     <BrainIcon/>
                     <p>Portfolio</p>
                 </a>
-                <a href="#contact" className="menu_navigation_item">
+                <a href="#contacts" className="menu_navigation_item">
                     <ContactIcon/>
                     <p>Contact</p>
                 </a>
