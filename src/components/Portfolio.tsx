@@ -5,6 +5,7 @@ import {
     gazpromOlympiad,
     domainsPage
 } from '../images/portfolio';
+import Heading from "../components/Heading";
 
 
 const portfolioItems = [
@@ -29,7 +30,7 @@ const Portfolio = () => {
     return (
         <section id="portfolio" className="section portfolio-section">
             <div className="portfolio">
-                <h1 className="portfolio-title" data-aos="zoom-in">My portfolio</h1>
+                <Heading text="My portfolio" className="portfolio-title"></Heading>
                 <p className="portfolio-desc">Here is a small gallery of my recent projects. Interested to know more about my work?</p>
                 <div className="portfolio-content">
                     <div className="project-cards">

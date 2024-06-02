@@ -1,6 +1,7 @@
 import React from "react";
 import SkillsCard from "./SkillsCard";
 import {skills as skillsArr} from "../shared/skills";
+import Heading from "../components/Heading";
 
 const Skills = () => {
     const skills = skillsArr;
@@ -8,7 +9,7 @@ const Skills = () => {
     return (
         <section id="skills" className="section skills-section">
             <div className="skills">
-                <h1 className="skills-title" data-aos="zoom-in">My skills</h1>
+                <Heading text="My skills" className="skills-title"></Heading>
                 <div className="skills-content">
                     {skills.map((item, key) => {
                         return (

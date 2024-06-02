@@ -19,9 +19,6 @@ const Intro = () => {
             const letter = document.createElement('span');
             letter.innerText = char;
             letter.className = 'intro_header_letter';
-            // letter.dataset.aos="letter-animation";
-            // letter.dataset.aosDuration="800";
-            // letter.dataset.aosDelay=`${index * 100}`;
 
             if (char === '*') {
                 letter.innerText = '👋🏻';
@@ -48,6 +45,7 @@ const Intro = () => {
         <section id="intro" className="section intro-section" onMouseEnter={addOneko} onMouseLeave={removeOneko}>
             <div className="intro">
                 <h1 className="intro_header" ref={textRef}></h1>
+                <p className="intro_desc">📍 Saint-Petersburg</p>
                 <div className="intro_content">
                     <a href="#contacts">
                         <button className="intro-button" data-aos="fade-up">Reach me</button>

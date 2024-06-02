@@ -1,5 +1,6 @@
 import React from "react";
 import {telegramIcon, gmailIcon, hhIcon, instIcon, linkedinIcon, githubIcon} from "../images/contacts";
+import Heading from "../components/Heading";
 
 const contacts = [
     {
@@ -38,7 +39,7 @@ const Contacts = () => {
     return (
         <section id="contacts" className="section contacts-section">
             <div className="contacts">
-                <h1 className="contacts-title" data-aos="zoom-in">Contact Me !</h1>
+                <Heading text="Contact me!" className="contacts-title"></Heading>
                 <div className="contacts-content">
                     {
                         contacts.map(contact => {

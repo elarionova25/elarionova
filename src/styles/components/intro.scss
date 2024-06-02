@@ -9,6 +9,7 @@
   justify-content: center;
   align-content: center;
   margin: 0 0 0 3rem;
+  font-family: $intro-font !important;
 
   &_header {
     cursor: default;
@@ -19,7 +20,6 @@
       font-size: 3rem;
     }
   }
-
 
   &_header-waving {
     animation-name: wave-animation;
@@ -50,13 +50,23 @@
     animation-duration: .6s;
     display: inline-block;
     text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
+
+    @include max-break($tablet-break) {
+      display: inline;
+    }
   }
 
   &_header_letter-main:hover {
     animation-name: rubberBand;
   }
 
+  &_desc {
+    font-size: 1.3rem;
+    opacity: 75%;
+  }
+
   &-button {
+    font-family: $intro-font !important;
     width: max-content;
     font-size: 1.5rem;
     background-color: transparent;

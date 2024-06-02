@@ -1,5 +1,5 @@
 import React from "react";
-
+import Heading from "../components/Heading";
 
 const AboutMe = () => {
     return (
@@ -12,7 +12,7 @@ const AboutMe = () => {
                 >
                 </div>
                 <div className="about-content">
-                    <h1 className="about-content_title" data-aos="fade-right">About Me</h1>
+                    <Heading text="About Me" className="about-content_title"></Heading>
                     <span className="about-content_text">Привет! Рад приветствовать тебя на моем сайте-портфолио! Я фронтенд разработчик с большой страстью к созданию красивых и функциональных веб-сайтов.
 
 С детства я увлекался компьютерами и технологиями, и моя любовь к программированию началась с создания простых игр и веб-сайтов. С тех пор этот интерес только углубился, и я посвятил свою карьеру фронтенд разработке.
