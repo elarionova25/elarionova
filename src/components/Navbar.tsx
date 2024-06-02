@@ -10,11 +10,6 @@ import {
 const Navbar = () => {
     return (
         <nav className="menu">
-            {/*<div className="menu_logo">*/}
-            {/*    <a className="logo" href="/">*/}
-            {/*        <div className="menu_logo_img"></div>*/}
-            {/*    </a>*/}
-            {/*</div>*/}
             <div className="menu_navigation">
                 <a href="/" className="menu_navigation_item">
                     <HomeIcon/>

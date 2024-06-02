@@ -1,12 +1,13 @@
 import React, {useEffect, useRef} from "react";
 import { oneko } from "../plugins/oneko";
+// @ts-ignore
 import CV from '../docs/CV.pdf';
 
 const Intro = () => {
     const textRef: any = useRef('');
 
     useEffect(() => {
-        const text = 'Hi*_I\'m Ekaterina,_Front-End Developer'.split('');
+        const text = 'Hi*_I\'m Ekaterina,_<Front-End Developer/>'.split('');
 
         text.forEach((char, index) => {
             if (char === '_') {
@@ -18,8 +19,9 @@ const Intro = () => {
             const letter = document.createElement('span');
             letter.innerText = char;
             letter.className = 'intro_header_letter';
-            letter.dataset.aos="letter-animation";
-            letter.dataset.aosDuration="800";
+            // letter.dataset.aos="letter-animation";
+            // letter.dataset.aosDuration="800";
+            // letter.dataset.aosDelay=`${index * 100}`;
 
             if (char === '*') {
                 letter.innerText = '👋🏻';

@@ -5,6 +5,12 @@ const AboutMe = () => {
     return (
         <section id="about" className="section about-section">
             <div className="about">
+                <div className="about-image"
+                     data-aos="fade-right"
+                     data-aos-offset="300"
+                     data-aos-easing="ease-in-sine"
+                >
+                </div>
                 <div className="about-content">
                     <h1 className="about-content_title" data-aos="fade-right">About Me</h1>
                     <span className="about-content_text">Привет! Рад приветствовать тебя на моем сайте-портфолио! Я фронтенд разработчик с большой страстью к созданию красивых и функциональных веб-сайтов.
@@ -17,7 +23,6 @@ const AboutMe = () => {
 
 Я стремлюсь к постоянному совершенствованию своих навыков и всегда готов к новым вызовам. </span>
                 </div>
-                <div className="about-image" data-aos="flip-left" data-aos-duration="2000"></div>
             </div>
         </section>
     )

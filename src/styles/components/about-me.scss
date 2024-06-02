@@ -1,22 +1,24 @@
 .about-section {
   background-image: linear-gradient(to bottom, $background_color, $blue-light-color);
-  height: fit-content;
+  display: flex;
 
   @include max-break($tablet-break) {
-    padding: 50px;
+    padding: 0 30px;
+    height: fit-content;
   }
 }
 
 .about {
-  padding: 150px;
+  padding: 3rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @include max-break($tablet-break) {
-    padding: 0;
+    padding: 1rem;
     flex-direction: column;
+    justify-content: start;
   }
 
   &-content {
@@ -31,12 +33,13 @@
 
     @include max-break($tablet-break) {
       max-width: 100%;
+      order: 0;
     }
   }
 
   &-image {
-    margin-left: 50px;
-    width: 40%;
+    margin-right: 2rem;
+    width: 500px;
     height: 500px;
     background-image: url(",,/../../images/logo-lg.jpg");
     border-radius: 50%;
@@ -44,9 +47,13 @@
     background-size: cover;
 
     @include max-break($tablet-break) {
-      width: 100%;
-      margin-left: 0;
-      height: 250px;
+      width: 300px;
+      height: 300px;
+      order: 1;
+    }
+
+    @include max-break($mobile-break) {
+      display: none;
     }
   }
 }

@@ -15,6 +15,7 @@ body {
     font-family: 'OpenSans', 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: $background_color;
 }
 
 code {
@@ -41,5 +42,9 @@ section {
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 5rem;
+
+    @include max-break($tablet-break) {
+        font-size: 4rem;
+    }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {telegramIcon, gmailIcon, hhIcon, instIcon, linkedinIcon} from "../images/contacts";
+import {telegramIcon, gmailIcon, hhIcon, instIcon, linkedinIcon, githubIcon} from "../images/contacts";
 
 const contacts = [
     {
@@ -25,6 +25,11 @@ const contacts = [
     {
         title: 'Linkedin',
         img: linkedinIcon,
+        href: ''
+    },
+    {
+        title: 'GitHub',
+        img: githubIcon,
         href: ''
     }
 ];

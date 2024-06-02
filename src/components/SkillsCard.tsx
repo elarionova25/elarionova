@@ -1,7 +1,6 @@
 import React from 'react';
 interface ICard {
     card: {
-        title: string;
         items: ICardItem[],
     }
 }
@@ -18,11 +17,7 @@ const SkillsCard = (props: ICard) => {
             <div className="skills-card_list">
                 {props.card.items.map((item, key) => {
                     return (
-                        <div className="skills-card_list_item"
-                             key={key}
-                             data-aos="fade-right"
-                             data-aos-offset="300"
-                             data-aos-easing="ease-in-sine">
+                        <div className="skills-card_list_item" key={key}>
                             <img src={item.img} alt={item.title} />
                             <p className="skills_card_list_item_name">{item.title}</p>
                         </div>

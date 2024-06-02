@@ -125,6 +125,24 @@
   }
 
   @include max-break($mobile-break) {
-    display: none;
+    width: 100%;
+    max-height: 55px;
+    max-width: 100%;
+    position: fixed;
+    left: 0;
+    top: 94%;
+
+    &_navigation {
+      flex-direction: row;
+
+      &_item {
+        padding: 0;
+        height: 55px;
+      }
+    }
+
+    .circle.github-link {
+      display: none;
+    }
   }
 }

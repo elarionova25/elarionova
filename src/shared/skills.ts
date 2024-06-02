@@ -18,7 +18,6 @@ import {
 
 export const skills = [
     {
-        title: 'Base',
         items: [
             {
                 img: htmlImg,
@@ -40,11 +39,6 @@ export const skills = [
                 img: typescriptImg,
                 title: 'TS'
             },
-        ]
-    },
-    {
-        title: 'Base',
-        items: [
             {
                 img: vueImg,
                 title: 'Vue'
@@ -64,12 +58,7 @@ export const skills = [
             {
                 img: reduxImg,
                 title: 'Redux'
-            }
-        ]
-    },
-    {
-        title: 'Base',
-        items: [
+            },
             {
                 img: gitImg,
                 title: 'Git'
@@ -89,7 +78,7 @@ export const skills = [
             {
                 img: bootstrapImg,
                 title: 'Bootstrap'
-            }
+            },
         ]
     },
 ];
