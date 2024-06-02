@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowDiagonalIcon } from '../images/icons';
 
 interface IProjectCard {
     projectImg: string;
@@ -6,17 +7,18 @@ interface IProjectCard {
     description: string;
     url: string;
     className: string;
+    isImageFirst: boolean;
 }
 
-const ProjectCard: React.FC<IProjectCard> = ({projectImg, title, description, url, className})  => {
+const ProjectCard: React.FC<IProjectCard> = ({projectImg, title, description, url, className, isImageFirst})  => {
     return (
-        <a href={url} target="_blank" rel="noreferrer" className={`project-cards_item`}>
-            <img src={projectImg} alt="project" className={`project-cards_item_img ${className}`}/>
-            <div className="project-cards_item_description">
-                <h1>{title}</h1>
+        <div className="card-item" style={{ flexDirection: isImageFirst ? 'row' : 'row-reverse' }}>
+            <img src={projectImg} alt="project" className={`card-item-img ${className}`}/>
+            <div className="card-item-desc">
+                <a href={url} className="card-item-desc_title" target="_blank" rel="noreferrer">{title}<ArrowDiagonalIcon/></a>
                 <p>{description}</p>
             </div>
-        </a>
+        </div>
     )
 }
 

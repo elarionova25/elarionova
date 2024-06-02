@@ -4,31 +4,37 @@ import Heading from "../components/Heading";
 
 const contacts = [
     {
+        id: 1,
         title: 'Telegram',
         img: telegramIcon,
         href: 'https://t.me/eelarionova'
     },
     {
+        id: 2,
         title: 'Gmail',
         img: gmailIcon,
         href: 'mailto: ekaterinalarionova25@gmail.com'
     },
     {
+        id: 3,
         title: 'HH',
         img: hhIcon,
         href: 'https://spb.hh.ru/resume/88463f5bff08e0cda50039ed1f6e5a46736f41'
     },
     {
+        id: 4,
         title: 'Instagram',
         img: instIcon,
         href: ''
     },
     {
+        id: 5,
         title: 'Linkedin',
         img: linkedinIcon,
         href: ''
     },
     {
+        id: 6,
         title: 'GitHub',
         img: githubIcon,
         href: ''
@@ -44,7 +50,7 @@ const Contacts = () => {
                     {
                         contacts.map(contact => {
                             return (
-                                <a className="contacts-card" href={contact.href} target="_blank" rel='noreferrer noopener'>
+                                <a className="contacts-card" key={contact.id} href={contact.href} target="_blank" rel='noreferrer noopener'>
                                     <img className="contacts-card_logo" src={contact.img} alt={contact.title}/>
                                     <div className="contacts-card_title">
                                         {contact.title}
