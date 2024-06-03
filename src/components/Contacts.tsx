@@ -1,6 +1,7 @@
 import React from "react";
 import {telegramIcon, gmailIcon, hhIcon, githubIcon} from "../images/contacts";
 import Heading from "../components/Heading";
+import {useTranslation} from "i18nano";
 
 const contacts = [
     {
@@ -30,10 +31,12 @@ const contacts = [
 ];
 
 const Contacts = () => {
+    const t = useTranslation();
+
     return (
         <section id="contacts" className="section contacts-section">
             <div className="contacts">
-                <Heading text="Contact me!" className="contacts-title"></Heading>
+                <Heading text={t('contacts.title')} className="contacts-title"></Heading>
                 <div className="contacts-content">
                     {
                         contacts.map(contact => {

@@ -1,9 +1,16 @@
 import React, {Suspense} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import {TranslationProvider} from 'i18nano';
 
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
+import LanguageChange from "./components/LanguageChange";
+
+const translations = {
+    'en': () => import('../src/shared/localization/en.json'),
+    'ru': () => import('../src/shared/localization/ru.json'),
+};
 
 const AboutMe = React.lazy(() => {
     return import('./components/AboutMe');
@@ -22,16 +29,21 @@ function App() {
     AOS.init();
 
     return <>
-        <Navbar />
-        <main className="container">
-            <Intro/>
-            <Suspense fallback={<div />}>
-                <AboutMe />
-                <Skills />
-                <Portfolio />
-                <Contacts />
+        <TranslationProvider translations={translations} language="ru" transition={true}>
+            <Suspense fallback={<div/>}>
+                <Navbar/>
             </Suspense>
-        </main>
+            <main className="container">
+                <LanguageChange/>
+                <Suspense fallback={<div/>}>
+                    <Intro/>
+                    <AboutMe/>
+                    <Skills/>
+                    <Portfolio/>
+                    <Contacts/>
+                </Suspense>
+            </main>
+        </TranslationProvider>
     </>
 }
 

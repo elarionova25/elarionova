@@ -6,6 +6,7 @@ import {
     domainsPage
 } from '../images/portfolio';
 import Heading from "../components/Heading";
+import {useTranslation} from "i18nano";
 
 
 const portfolioItems = [
@@ -37,10 +38,12 @@ const portfolioItems = [
     }
 ]
 const Portfolio = () => {
+    const t = useTranslation();
+
     return (
         <section id="portfolio" className="section portfolio-section">
             <div className="portfolio">
-                <Heading text="My portfolio" className="portfolio-title"></Heading>
+                <Heading text={t('portfolio.title')} className="portfolio-title"></Heading>
                 <p className="portfolio-desc">Here is a small gallery of my recent projects. Interested to know more about my work?</p>
                 <div className="portfolio-content">
                     <div className="project-cards">

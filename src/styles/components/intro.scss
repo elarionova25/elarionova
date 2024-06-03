@@ -11,6 +11,10 @@
   margin: 0 0 0 3rem;
   font-family: $intro-font !important;
 
+  @include max-break($tablet-break) {
+    margin: 0 0 0 1rem;
+  }
+
   &_header {
     cursor: default;
     font-size: 6rem;

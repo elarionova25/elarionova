@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
+import {useTranslation} from "i18nano";
 
 interface IHeadingfProps {
   text: string;
@@ -6,14 +7,18 @@ interface IHeadingfProps {
 }
 
 const Heading: React.FC<IHeadingfProps> = ({text, className}) => {
+  const heading: any = useRef();
 
-  const heading: any = React.useRef();
-  const characters = text.split('');
-  
-  
-  React.useEffect(() => {
+  console.log(text)
+
+  useEffect(() => {
+    const characters = text.split('');
+    console.log(characters)
+    heading.current.innerHTML = '';
+
     characters.forEach((char, i) => {
       const letter = document.createElement('span');
+
       if (char === ' ') {
         letter.style.display = 'inline';
       } else {
@@ -27,11 +32,11 @@ const Heading: React.FC<IHeadingfProps> = ({text, className}) => {
 
       heading.current.append(letter)
     });
-  }, []);
+  }, [text]);
 
 
   return (
-    <h1 ref={heading} className={className}></h1>
+    <h1 ref={heading} className={className}> </h1>
   )
 }
 

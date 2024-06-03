@@ -1,0 +1,27 @@
+{
+  "navbar": {
+    "intro": "Intro",
+    "aboutMe": "About Me",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "intro": {
+    "title": "Hi*_I'm Ekaterina,_<Front-End Developer/>",
+    "location": "Saint-Petersburg",
+    "reachMe": "Reach me",
+    "cv": "CV"
+  },
+  "aboutMe": {
+    "title": "About Me"
+  },
+  "skills": {
+    "title": "My skills"
+  },
+  "portfolio": {
+    "title": "My portfolio"
+  },
+  "contacts": {
+    "title": "Contact me!"
+  }
+}

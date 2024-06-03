@@ -1,0 +1,27 @@
+{
+  "navbar": {
+    "intro": "Главная",
+    "aboutMe": "Обо мне",
+    "skills": "Навыки",
+    "portfolio": "Портфолио",
+    "contact": "Контакты"
+  },
+  "intro": {
+    "title": "Привeт*_Я Екатерина,_<Front-End Разработчик/>",
+    "location": "Санкт-Петербург",
+    "reachMe": "Написать",
+    "cv": "CV"
+  },
+  "aboutMe": {
+    "title": "Обо мне"
+  },
+  "skills": {
+    "title": "Мои навыки"
+  },
+  "portfolio": {
+    "title": "Портфолио"
+  },
+  "contacts": {
+    "title": "Напиши мне"
+  }
+}
