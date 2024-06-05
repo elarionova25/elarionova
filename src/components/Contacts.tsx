@@ -1,7 +1,7 @@
-import React from "react";
-import {telegramIcon, gmailIcon, hhIcon, githubIcon} from "../images/contacts";
-import Heading from "../components/Heading";
-import {useTranslation} from "i18nano";
+import React from 'react';
+import { telegramIcon, gmailIcon, hhIcon, githubIcon } from '../images/contacts';
+import Heading from '../components/Heading';
+import { useTranslation } from 'i18nano';
 
 const contacts = [
     {
@@ -36,13 +36,13 @@ const Contacts = () => {
     return (
         <section id="contacts" className="section contacts-section">
             <div className="contacts">
-                <Heading text={t('contacts.title')} className="contacts-title"></Heading>
+                <Heading text={ t('contacts.title') } className="contacts-title"></Heading>
                 <div className="contacts-content">
                     {
                         contacts.map(contact => {
                             return (
-                                <a className="contacts-card" key={contact.id} href={contact.href} target="_blank" rel='noreferrer noopener'>
-                                    <img className="contacts-card_logo" src={contact.img} alt={contact.title}/>
+                                <a className="contacts-card" key={ contact.id } href={ contact.href } target="_blank" rel='noreferrer noopener'>
+                                    <img className="contacts-card_logo" src={ contact.img } alt={ contact.title }/>
                                     <div className="contacts-card_title">
                                         {contact.title}
                                     </div>

@@ -1,5 +1,5 @@
 export function oneko() {
-    const nekoEl = document.createElement("div");
+    const nekoEl = document.createElement('div');
     let nekoPosX = 808;
     let nekoPosY = 202;
     let mousePosX = 0;
@@ -10,60 +10,60 @@ export function oneko() {
     let idleAnimationFrame = 0;
     const nekoSpeed = 10;
     const spriteSets = {
-        idle: [[-3, -3]],
-        alert: [[-7, -3]],
+        idle: [ [ -3, -3 ] ],
+        alert: [ [ -7, -3 ] ],
         scratch: [
-            [-5, 0],
-            [-6, 0],
-            [-7, 0],
+            [ -5, 0 ],
+            [ -6, 0 ],
+            [ -7, 0 ],
         ],
-        tired: [[-3, -2]],
+        tired: [ [ -3, -2 ] ],
         sleeping: [
-            [-2, 0],
-            [-2, -1],
+            [ -2, 0 ],
+            [ -2, -1 ],
         ],
         N: [
-            [-1, -2],
-            [-1, -3],
+            [ -1, -2 ],
+            [ -1, -3 ],
         ],
         NE: [
-            [0, -2],
-            [0, -3],
+            [ 0, -2 ],
+            [ 0, -3 ],
         ],
         E: [
-            [-3, 0],
-            [-3, -1],
+            [ -3, 0 ],
+            [ -3, -1 ],
         ],
         SE: [
-            [-5, -1],
-            [-5, -2],
+            [ -5, -1 ],
+            [ -5, -2 ],
         ],
         S: [
-            [-6, -3],
-            [-7, -2],
+            [ -6, -3 ],
+            [ -7, -2 ],
         ],
         SW: [
-            [-5, -3],
-            [-6, -1],
+            [ -5, -3 ],
+            [ -6, -1 ],
         ],
         W: [
-            [-4, -2],
-            [-4, -3],
+            [ -4, -2 ],
+            [ -4, -3 ],
         ],
         NW: [
-            [-1, 0],
-            [-1, -1],
+            [ -1, 0 ],
+            [ -1, -1 ],
         ],
     };
     function create() {
-        nekoEl.id = "oneko";
-        nekoEl.style.width = "32px";
-        nekoEl.style.height = "32px";
-        nekoEl.style.position = "fixed";
+        nekoEl.id = 'oneko';
+        nekoEl.style.width = '32px';
+        nekoEl.style.height = '32px';
+        nekoEl.style.position = 'fixed';
         nekoEl.style.backgroundImage = "url('../oneko.gif')";
-        nekoEl.style.imageRendering = "pixelated";
-        nekoEl.style.left = "16px";
-        nekoEl.style.top = "16px";
+        nekoEl.style.imageRendering = 'pixelated';
+        nekoEl.style.left = '16px';
+        nekoEl.style.top = '16px';
 
         document.body.appendChild(nekoEl);
 
@@ -76,9 +76,9 @@ export function oneko() {
     }
 
     function setSprite(name, frame) {
-        const sprite = spriteSets[name][frame % spriteSets[name].length];
-        nekoEl.style.backgroundPosition = `${sprite[0] * 32}px ${
-            sprite[1] * 32
+        const sprite = spriteSets[ name ][ frame % spriteSets[ name ].length ];
+        nekoEl.style.backgroundPosition = `${ sprite[ 0 ] * 32 }px ${
+            sprite[ 1 ] * 32
         }px`;
     }
 
@@ -96,30 +96,30 @@ export function oneko() {
             Math.floor(Math.random() * 200) === 0 &&
             idleAnimation == null
         ) {
-            idleAnimation = ["sleeping", "scratch"][
+            idleAnimation = [ 'sleeping', 'scratch' ][
                 Math.floor(Math.random() * 2)
             ];
         }
 
         switch (idleAnimation) {
-            case "sleeping":
+            case 'sleeping':
                 if (idleAnimationFrame < 8) {
-                    setSprite("tired", 0);
+                    setSprite('tired', 0);
                     break;
                 }
-                setSprite("sleeping", Math.floor(idleAnimationFrame / 4));
+                setSprite('sleeping', Math.floor(idleAnimationFrame / 4));
                 if (idleAnimationFrame > 192) {
                     resetIdleAnimation();
                 }
                 break;
-            case "scratch":
-                setSprite("scratch", idleAnimationFrame);
+            case 'scratch':
+                setSprite('scratch', idleAnimationFrame);
                 if (idleAnimationFrame > 9) {
                     resetIdleAnimation();
                 }
                 break;
             default:
-                setSprite("idle", 0);
+                setSprite('idle', 0);
                 return;
         }
         idleAnimationFrame += 1;
@@ -140,7 +140,7 @@ export function oneko() {
         idleAnimationFrame = 0;
 
         if (idleTime > 1) {
-            setSprite("alert", 0);
+            setSprite('alert', 0);
             // count down after being alerted before moving
             idleTime = Math.min(idleTime, 7);
             idleTime -= 1;
@@ -148,17 +148,17 @@ export function oneko() {
         }
 
         let direction = null;
-        direction = diffY / distance > 0.5 ? "N" : "";
-        direction += diffY / distance < -0.5 ? "S" : "";
-        direction += diffX / distance > 0.5 ? "W" : "";
-        direction += diffX / distance < -0.5 ? "E" : "";
+        direction = diffY / distance > 0.5 ? 'N' : '';
+        direction += diffY / distance < -0.5 ? 'S' : '';
+        direction += diffX / distance > 0.5 ? 'W' : '';
+        direction += diffX / distance < -0.5 ? 'E' : '';
         setSprite(direction, frameCount);
 
         nekoPosX -= (diffX / distance) * nekoSpeed;
         nekoPosY -= (diffY / distance) * nekoSpeed;
 
-        nekoEl.style.left = `${nekoPosX - 16}px`;
-        nekoEl.style.top = `${nekoPosY - 16}px`;
+        nekoEl.style.left = `${ nekoPosX - 16 }px`;
+        nekoEl.style.top = `${ nekoPosY - 16 }px`;
     }
 
     create();

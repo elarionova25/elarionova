@@ -17,7 +17,7 @@
 
   &_header {
     cursor: default;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: normal;
 
     @include max-break($tablet-break) {
@@ -34,11 +34,11 @@
   }
 
   &_header_letter {
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
   }
 
   &_header_letter:hover {
-    font-size: 7rem;
+    //font-size: 7rem;
     color: $blue-color !important;
     text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
 

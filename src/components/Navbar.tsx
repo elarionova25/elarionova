@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
     StarIcon,
     CodeIcon,
@@ -6,7 +6,7 @@ import {
     ContactIcon,
     HomeIcon,
 } from '../images/icons';
-import {useTranslation} from "i18nano";
+import { useTranslation } from 'i18nano';
 
 const Navbar = () => {
     const t = useTranslation();

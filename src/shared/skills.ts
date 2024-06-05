@@ -14,7 +14,7 @@ import {
     reduxImg,
     webpackImg,
     bootstrapImg, nuxtImg, figmaImg,
-} from "../images/skills-icons";
+} from '../images/skills-icons';
 
 export const skills = [
     {

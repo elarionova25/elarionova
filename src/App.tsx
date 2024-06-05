@@ -1,11 +1,11 @@
-import React, {Suspense} from "react";
+import React, { Suspense } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import {TranslationProvider} from 'i18nano';
+import { TranslationProvider } from 'i18nano';
 
-import Navbar from "./components/Navbar";
-import Intro from "./components/Intro";
-import LanguageChange from "./components/LanguageChange";
+import Navbar from './components/Navbar';
+import Intro from './components/Intro';
+import LanguageChange from './components/LanguageChange';
 
 const translations = {
     'en': () => import('../src/shared/localization/en.json'),
@@ -29,13 +29,13 @@ function App() {
     AOS.init();
 
     return <>
-        <TranslationProvider translations={translations} language="ru" transition={true}>
-            <Suspense fallback={<div/>}>
+        <TranslationProvider translations={ translations } language="ru" transition={ true }>
+            <Suspense fallback={ <div/> }>
                 <Navbar/>
             </Suspense>
             <main className="container">
                 <LanguageChange/>
-                <Suspense fallback={<div/>}>
+                <Suspense fallback={ <div/> }>
                     <Intro/>
                     <AboutMe/>
                     <Skills/>

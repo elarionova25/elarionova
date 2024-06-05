@@ -1,19 +1,15 @@
-import React, {useEffect, useRef} from 'react';
-import {useTranslation} from "i18nano";
+import React, { useEffect, useRef } from 'react';
 
 interface IHeadingfProps {
   text: string;
   className: string;
 }
 
-const Heading: React.FC<IHeadingfProps> = ({text, className}) => {
+const Heading: React.FC<IHeadingfProps> = ({ text, className }) => {
   const heading: any = useRef();
-
-  console.log(text)
 
   useEffect(() => {
     const characters = text.split('');
-    console.log(characters)
     heading.current.innerHTML = '';
 
     characters.forEach((char, i) => {
@@ -26,17 +22,16 @@ const Heading: React.FC<IHeadingfProps> = ({text, className}) => {
       }
       letter.innerText = char;
 
-      letter.dataset.aos="zoom-in";
-      letter.dataset.aosDuration="100";
-      letter.dataset.aosDelay=`${i * 100}`
+      letter.dataset.aos='zoom-in';
+      letter.dataset.aosDuration='100';
+      letter.dataset.aosDelay=`${ i * 100 }`
 
       heading.current.append(letter)
     });
-  }, [text]);
-
+  }, [ text ]);
 
   return (
-    <h1 ref={heading} className={className}> </h1>
+      <h1 ref={ heading } className={ className }> </h1>
   )
 }
 

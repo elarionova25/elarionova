@@ -1,8 +1,8 @@
-import React, {useEffect, useLayoutEffect, useRef, useState, useTransition} from "react";
-import { oneko } from "../plugins/oneko";
+import React, { useEffect, useRef } from 'react';
+import { oneko } from '../plugins/oneko';
 // @ts-ignore
 import CV from '../docs/CV.pdf';
-import {TranslationContext, useTranslation} from "i18nano";
+import { useTranslation } from 'i18nano';
 
 const Intro = () => {
     const t = useTranslation();
@@ -14,7 +14,7 @@ const Intro = () => {
 
         textRef.current.innerHTML = '';
 
-        text.forEach((char, index) => {
+        text.forEach((char, i) => {
             if (char === '_') {
                 const br =  document.createElement('br');
                 textRef.current.append(br);
@@ -34,9 +34,13 @@ const Intro = () => {
                 letter.className = 'intro_header_letter-main';
             }
 
+            letter.dataset.aos='zoom-in';
+            letter.dataset.aosDuration='50';
+            letter.dataset.aosDelay=`${ i * 50 }`
+
             textRef.current.append(letter);
         })
-    }, [introText]);
+    }, [ introText ]);
 
     const addOneko = () => {
         oneko()
@@ -47,15 +51,15 @@ const Intro = () => {
     }
 
     return (
-        <section id="intro" className="section intro-section" onMouseEnter={addOneko} onMouseLeave={removeOneko}>
+        <section id="intro" className="section intro-section" onMouseEnter={ addOneko } onMouseLeave={ removeOneko }>
             <div className="intro">
-                <h1 className="intro_header" ref={textRef}> </h1>
+                <h1 className="intro_header" ref={ textRef }> </h1>
                 <p className="intro_desc">📍 {t('intro.location')}</p>
                 <div className="intro_content">
                     <a href="#contacts">
                         <button className="intro-button" data-aos="fade-up">{t('intro.reachMe')}</button>
                     </a>
-                    <a href={CV} target="_blank" rel="noreferrer">
+                    <a href={ CV } target="_blank" rel="noreferrer">
                         <button className="intro-button" data-aos="fade-up">{t('intro.cv')}</button>
                     </a>
                 </div>
@@ -65,4 +69,3 @@ const Intro = () => {
 }
 
 export default Intro;
-
