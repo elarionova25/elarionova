@@ -1,6 +1,6 @@
 export function oneko() {
     const nekoEl = document.createElement('div');
-    let nekoPosX = 808;
+    let nekoPosX = window.innerWidth / 2;
     let nekoPosY = 202;
     let mousePosX = 0;
     let mousePosY = 0;

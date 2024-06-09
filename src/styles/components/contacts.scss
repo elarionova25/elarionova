@@ -6,6 +6,10 @@
     height: fit-content;
     padding: 50px;
   }
+
+  @include max-break($mobile-break) {
+    padding-bottom: 70px;
+  }
 }
 
 .contacts {
@@ -19,6 +23,7 @@
   }
 
   &-title {
+    white-space: nowrap;
     color: $blue-color;
     text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
   }

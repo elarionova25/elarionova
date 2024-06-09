@@ -29,11 +29,16 @@
       text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
       max-width: 30rem;
       text-align: justify;
+      white-space: nowrap;
     }
 
     &_text {
       font-size: 18px;
       white-space: pre-line;
+
+      @include max-break($tablet-break) {
+        font-size: 15px;
+      }
 
       a {
         text-decoration: underline;

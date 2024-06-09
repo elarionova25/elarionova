@@ -1,7 +1,6 @@
 .menu {
   width: 100%;
   min-height: 100vh;
-  min-height: -webkit-fill-available;
   max-width: $menu_width;
   position: fixed;
   z-index: 10;
@@ -125,24 +124,27 @@
   }
 
   @include max-break($mobile-break) {
-    width: 100%;
+    min-width: 100%;
+    top: 91%;
     max-height: 55px;
-    max-width: 100%;
-    position: fixed;
-    left: 0;
-    top: 94%;
 
     &_navigation {
       flex-direction: row;
+      margin: 0;
 
       &_item {
-        padding: 0;
-        height: 55px;
+        padding: 10px;
         width: 19%;
+        height: fit-content;
+
+        svg {
+          width: 60%;
+          height: 60%;
+        }
       }
     }
 
-    .circle.github-link {
+    &_links {
       display: none;
     }
   }
