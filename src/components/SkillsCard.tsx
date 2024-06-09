@@ -1,23 +1,21 @@
 import React from 'react';
+import { skills as skillsArr } from '../shared/skills';
 
-interface ICardItem {
-  img: string,
-  title: string,
-}
-interface ICard {
-    card: {
-        items: ICardItem[],
-    }
+interface ISkillsItem {
+  id: number,
+  img: any,
+  title: string
 }
 
-const SkillsCard = (props: ICard) => {
+const skills: ISkillsItem[] = skillsArr;
+
+const SkillsCard = () => {
     return (
         <div className="skills-card" data-aos="zoom-in">
-            {/*<p className="skills-card_title">{props.card.title}</p>*/}
             <div className="skills-card_list">
-                {props.card.items.map((item, key) => {
+                {skills.map((item, key) => {
                     return (
-                        <div className="skills-card_list_item" key={ key }>
+                        <div className="skills-card_list_item" key={ item.id }>
                             <img src={ item.img } alt={ item.title } />
                             <p className="skills_card_list_item_name">{item.title}</p>
                         </div>

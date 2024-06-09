@@ -75,6 +75,7 @@ export function oneko() {
         window.onekoInterval = setInterval(frame, 100);
     }
 
+    // eslint-disable-next-line no-shadow
     function setSprite(name, frame) {
         const sprite = spriteSets[ name ][ frame % spriteSets[ name ].length ];
         nekoEl.style.backgroundPosition = `${ sprite[ 0 ] * 32 }px ${

@@ -16,77 +16,90 @@ import {
     bootstrapImg, nuxtImg, figmaImg,
 } from '../images/skills-icons';
 
-export const skills = [
+export const skills: any= [
     {
-        items: [
-            {
-                img: htmlImg,
-                title: 'HTML'
-            },
-            {
-                img: cssImg,
-                title: 'CSS'
-            },
-            {
-                img: sassImg,
-                title: 'SASS'
-            },
-            {
-                img: jsImg,
-                title: 'JS'
-            },
-            {
-                img: typescriptImg,
-                title: 'TS'
-            },
-            {
-                img: vueImg,
-                title: 'Vue.js'
-            },
-            {
-                img: nuxtImg,
-                title: 'Nuxt.js'
-            },
-            {
-                img: reactImg,
-                title: 'React'
-            },
-            {
-                img: vuexImg,
-                title: 'Vuex'
-            },
-            {
-                img: piniaImg,
-                title: 'Pinia'
-            },
-            {
-                img: reduxImg,
-                title: 'Redux'
-            },
-            {
-                img: gitImg,
-                title: 'Git'
-            },
-            {
-                img: restApi,
-                title: 'Rest API'
-            },
-            {
-                img: jqueryImg,
-                title: 'JQuery'
-            },
-            {
-                img: webpackImg,
-                title: 'Webpack'
-            },
-            {
-                img: bootstrapImg,
-                title: 'Bootstrap'
-            },
-            {
-                img: figmaImg,
-                title: 'Figma'
-            },
-        ]
+        id: 1,
+        img: htmlImg,
+        title: 'HTML'
+    },
+    {
+        id: 2,
+        img: cssImg,
+        title: 'CSS'
+    },
+    {
+        id: 3,
+        img: sassImg,
+        title: 'SASS'
+    },
+    {
+        id: 4,
+        img: jsImg,
+        title: 'JS'
+    },
+    {
+        id: 5,
+        img: typescriptImg,
+        title: 'TS'
+    },
+    {
+        id: 6,
+        img: vueImg,
+        title: 'Vue.js'
+    },
+    {
+        id: 7,
+        img: nuxtImg,
+        title: 'Nuxt.js'
+    },
+    {
+        id: 8,
+        img: reactImg,
+        title: 'React'
+    },
+    {
+        id: 9,
+        img: vuexImg,
+        title: 'Vuex'
+    },
+    {
+        id: 10,
+        img: piniaImg,
+        title: 'Pinia'
+    },
+    {
+        id: 11,
+        img: reduxImg,
+        title: 'Redux'
+    },
+    {
+        id: 12,
+        img: gitImg,
+        title: 'Git'
+    },
+    {
+        id: 13,
+        img: restApi,
+        title: 'Rest API'
+    },
+    {
+        id: 14,
+        img: jqueryImg,
+        title: 'JQuery'
+    },
+    {
+        id: 15,
+        img: webpackImg,
+        title: 'Webpack'
+    },
+    {
+        id: 16,
+        img: bootstrapImg,
+        title: 'Bootstrap'
+    },
+    {
+        id: 17,
+        img: figmaImg,
+        title: 'Figma'
     },
 ];
