@@ -16,7 +16,7 @@ const ProjectCard: React.FC<IProjectCard> = ({ projectImg, title, description, u
             <img src={ projectImg } alt="project" className={ `card-item-img ${ className }` }/>
             <div className="card-item-desc">
                 <a href={ url } className="card-item-desc_title" target="_blank" rel="noreferrer">{title}<ArrowDiagonalIcon/></a>
-                <p>{description}</p>
+                <p className="card-item-desc_text">{description}</p>
             </div>
         </div>
     )

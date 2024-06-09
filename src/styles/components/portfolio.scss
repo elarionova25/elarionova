@@ -4,6 +4,10 @@
   background-image: linear-gradient(to bottom, $pink-light-color, $background_color);
 
   @include max-break($tablet-break) {
+    padding: 50px 100px;
+  }
+
+  @include max-break($mobile-break) {
     padding: 50px;
   }
 }
@@ -28,7 +32,7 @@
   }
 
   &-content {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
   }
@@ -59,6 +63,10 @@
 
     @include max-break($tablet-break) {
       max-width: 100%;
+    }
+
+    @include max-break($mobile-break) {
+      max-width: 100%;
       width: 100%;
     }
   }
@@ -78,6 +86,11 @@
         width: 3rem;
         margin-bottom: -10px;
       }
+    }
+
+    &_text {
+      white-space: pre-line;
+      margin-top: 10px;
     }
 
     &_title:hover {

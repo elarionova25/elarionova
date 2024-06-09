@@ -13,13 +13,23 @@
     "cv": "CV"
   },
   "aboutMe": {
-    "title": "About Me"
+    "title": "About Me",
+    "text": "\uD83D\uDC23 I'm Larionova Ekaterina, a Middle Frontend Developer currently based in St.Petersburg, Russia.\n\n\uD83D\uDC69\uD83C\uDFFC\u200D\uD83D\uDCBB For the last 4 years I`ve been actively immersed in web development.\n\n\uD83D\uDCDA I have a Specialist Degree in Cyber security.\n\n✨ I specialize in building good-looking and reliable front-end for different services and applications. I carry out implementation from layout (Figma) to release into production. I worked on projects both in a team of frontend developers and alone.\n\n\uD83E\uDE90 I'm continuously expanding my skill set by exploring modern frameworks and learning new technologies.\n\n\uD83D\uDCCA You can find more detailed information about my experience in my <a href='http://localhost:3000/static/media/CV.ea53b2f27fd76a054450.pdf' target='_blanc'>CV</a>."
+
   },
   "skills": {
     "title": "My skills"
   },
   "portfolio": {
-    "title": "My portfolio"
+    "title": "My portfolio",
+    "gazprom": {
+      "title": "Gazprom Academic Olympiad for school students",
+      "description": "✅ I independently developed the design of the entire system (Participant’s personal account and landing page)\n\n✅ Coordination with the customer of all details of business logic\n\n✅ Developed a new frontend architecture\n\n ✅ Rewrote the frontend from the legacy framework Backbone.js to Vue.js"
+    },
+    "domains": {
+      "title": "Domains page and Domain names generator",
+      "description": "✅ Page layout\n\n✅ Development of an intelligent assistant that suggests original free domain names\n\n✅ The logic for formatting user-entered text is fully implemented on the front end using OOP principles\n\n✅ The domain generator is implemented modularly and can be used in other projects\n\n ✅ Currently one of the most popular features among clients"
+    }
   },
   "contacts": {
     "title": "Contact me!"

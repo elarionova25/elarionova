@@ -22,13 +22,23 @@
   }
 
   &-content {
-    max-width: 50%;
+    max-width: 40%;
 
     &_title {
       color: $pink-color;
       text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
       max-width: 30rem;
       text-align: justify;
+    }
+
+    &_text {
+      font-size: 18px;
+      white-space: pre-line;
+
+      a {
+        text-decoration: underline;
+        font-weight: bolder;
+      }
     }
 
     @include max-break($tablet-break) {
@@ -45,15 +55,17 @@
     border-radius: 50%;
     background-position: center;
     background-size: cover;
+    box-shadow: -.4em 0 2em $shadow-color;
 
     @include max-break($tablet-break) {
       width: 300px;
       height: 300px;
       order: 1;
+      margin-top: 20px;
     }
 
-    @include max-break($mobile-break) {
-      display: none;
-    }
+    //@include max-break($mobile-break) {
+    //  display: none;
+    //}
   }
 }

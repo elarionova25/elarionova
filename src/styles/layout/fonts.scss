@@ -5,3 +5,8 @@
   font-family: 'Inconsolata';
   src: local('Inconsolata'), url(../../fonts/Inconsolata/Inconsolata-LGC.otf) format('opentype');
 }
+
+@font-face {
+  font-family: 'NTSomic';
+  src: local('NTSomic'), url(../../fonts/NTSomic/NTSomic.ttf) format('truetype')
+}
