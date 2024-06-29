@@ -1,5 +1,5 @@
 .contacts-section {
-  background-image: linear-gradient(to bottom, $background_color, $blue-light-color);
+  //background-image: linear-gradient(to bottom, $background_color, $blue-light-color);
   height: 40vh;
 
   @include max-break($tablet-break) {

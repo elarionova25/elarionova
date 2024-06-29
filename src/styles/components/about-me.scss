@@ -1,5 +1,5 @@
 .about-section {
-  background-image: linear-gradient(to bottom, $background_color, $blue-light-color);
+  //background-image: linear-gradient(to bottom, $background_color, $blue-light-color);
   display: flex;
 
   @include max-break($tablet-break) {

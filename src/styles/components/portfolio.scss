@@ -1,7 +1,7 @@
 .portfolio-section {
   //background-color: $background_color;
   height: fit-content;
-  background-image: linear-gradient(to bottom, $pink-light-color, $background_color);
+  //background-image: linear-gradient(to bottom, $pink-light-color, $background_color);
 
   @include max-break($tablet-break) {
     padding: 50px 100px;
@@ -24,6 +24,7 @@
     white-space: nowrap;
     color: $blue-color;
     text-shadow: -1px 0 $typography-color, 0 1px $typography-color, 1px 0 $typography-color, 0 -1px $typography-color;
+    text-align: center;
   }
 
   &-desc {
